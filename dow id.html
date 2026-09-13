@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Increment Decrement</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        background: white;
+        width: 350px;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    #count {
+        font-size: 70px;
+        font-weight: bold;
+        color: #667eea;
+        margin-bottom: 30px;
+    }
+
+    button {
+        border: none;
+        padding: 12px 25px;
+        margin: 8px;
+        border-radius: 10px;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    #btn {
+        background: #28a745;
+    }
+
+    #btn:hover {
+        background: #218838;
+        transform: scale(1.05);
+    }
+
+    #btn2 {
+        background: #dc3545;
+    }
+
+    #btn2:hover {
+        background: #c82333;
+        transform: scale(1.05);
+    }
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Counter</h1>
+
+    <p id="count">0</p>
+
+    <button id="btn">➕ Increment</button>
+
+    <button id="btn2">➖ Decrement</button>
+
+</div>
+
+<script>
+
+    let count = document.getElementById("count");
+    let button = document.getElementById("btn");
+    let button2 = document.getElementById("btn2");
+
+    button.addEventListener("click", function() {
+        count.textContent = Number(count.textContent) + 1;
+    });
+
+    button2.addEventListener("click", function() {
+        count.textContent = Number(count.textContent) - 1;
+    });
+
+</script>
+
+
+</body>
+</html>
+
